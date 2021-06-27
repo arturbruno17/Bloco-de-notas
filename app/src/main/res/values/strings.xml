@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Bloco de notas</string>
+    <string name="favorites">Favoritos</string>
+    <string name="notes">Anotações</string>
+    <string name="tasks">Tarefas</string>
+    <string name="favorite_content_description">Anotações marcadas como favoritas</string>
+    <string name="notes_content_description">Anotações criadas</string>
+    <string name="tasks_content_description">Tarefas criadas</string>
 </resources>
