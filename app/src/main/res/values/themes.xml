@@ -18,7 +18,7 @@
     <style name="Heading">
         <item name="android:textSize">20sp</item>
         <item name="lineHeight">30sp</item>
-        <item name="fontFamily">@font/noto_sans</item>
+        <item name="fontFamily">@font/open_sans</item>
     </style>
 
     <style name="Body">
