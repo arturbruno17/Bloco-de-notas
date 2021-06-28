@@ -6,17 +6,18 @@
     app:startDestination="@id/annotationFragment">
     <fragment
         android:id="@+id/favoritesFragment"
-        android:name="com.posart.blocodenotas.FavoritesFragment"
+        android:name="com.posart.blocodenotas.views.FavoritesFragment"
         android:label="Favoritos"
         tools:layout="@layout/fragment_favorites" />
     <fragment
         android:id="@+id/annotationFragment"
-        android:name="com.posart.blocodenotas.AnnotationsFragment"
+        android:name="com.posart.blocodenotas.views.AnnotationsFragment"
         android:label="Anotações"
-        tools:layout="@layout/fragment_annotations" />
+        tools:layout="@layout/fragment_annotations" >
+    </fragment>
     <fragment
         android:id="@+id/tasksFragment"
-        android:name="com.posart.blocodenotas.TasksFragment"
+        android:name="com.posart.blocodenotas.views.TasksFragment"
         android:label="Tarefas"
         tools:layout="@layout/fragment_tasks" />
 </navigation>

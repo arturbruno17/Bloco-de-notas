@@ -1,19 +1,24 @@
-package com.posart.blocodenotas
+package com.posart.blocodenotas.views
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import com.posart.blocodenotas.R
+import com.posart.blocodenotas.databinding.FragmentAnnotationsBinding
 
 class AnnotationsFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_annotations, container, false)
+    ): View {
+        val binding = FragmentAnnotationsBinding.inflate(layoutInflater)
+
+        return binding.root
+
     }
 
 }
