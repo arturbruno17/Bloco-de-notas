@@ -6,4 +6,7 @@
     <string name="favorite_content_description">Anotações marcadas como favoritas</string>
     <string name="notes_content_description">Anotações criadas</string>
     <string name="tasks_content_description">Tarefas criadas</string>
+    <string name="fab_description">Adicionar uma anotação</string>
+    <string name="title_hint">Título</string>
+    <string name="message_hint">Mensagem</string>
 </resources>

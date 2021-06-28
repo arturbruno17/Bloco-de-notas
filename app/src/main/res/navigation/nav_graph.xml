@@ -14,10 +14,18 @@
         android:name="com.posart.blocodenotas.views.AnnotationsFragment"
         android:label="Anotações"
         tools:layout="@layout/fragment_annotations" >
+        <action
+            android:id="@+id/action_annotationFragment_to_createAnnotationFragment"
+            app:destination="@id/createAnnotationFragment" />
     </fragment>
     <fragment
         android:id="@+id/tasksFragment"
         android:name="com.posart.blocodenotas.views.TasksFragment"
         android:label="Tarefas"
         tools:layout="@layout/fragment_tasks" />
+    <fragment
+        android:id="@+id/createAnnotationFragment"
+        android:name="com.posart.blocodenotas.views.CreateAnnotationFragment"
+        android:label="Criar anotação"
+        tools:layout="@layout/fragment_create_annotation" />
 </navigation>

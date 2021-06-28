@@ -17,6 +17,10 @@ class AnnotationsFragment : Fragment() {
     ): View {
         val binding = FragmentAnnotationsBinding.inflate(layoutInflater)
 
+        binding.fab.setOnClickListener {
+            findNavController().navigate(R.id.action_annotationFragment_to_createAnnotationFragment)
+        }
+
         return binding.root
 
     }
