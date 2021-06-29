@@ -10,4 +10,6 @@
     <string name="title_hint">Título</string>
     <string name="message_hint">Mensagem</string>
     <string name="save_button_text">Salvar</string>
+    <string name="message_annotation_success">A anotação foi adicionada!</string>
+    <string name="message_annotation_failed">Falha ao adicionar a anotação</string>
 </resources>
