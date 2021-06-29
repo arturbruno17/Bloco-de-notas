@@ -9,4 +9,5 @@
     <string name="fab_description">Adicionar uma anotação</string>
     <string name="title_hint">Título</string>
     <string name="message_hint">Mensagem</string>
+    <string name="save_button_text">Salvar</string>
 </resources>
