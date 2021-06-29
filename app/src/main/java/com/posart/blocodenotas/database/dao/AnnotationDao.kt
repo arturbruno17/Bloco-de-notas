@@ -12,7 +12,7 @@ interface AnnotationDao {
     suspend fun insertAnnotation(annotation: Annotation)
 
     @Update
-    suspend fun updateAnnotatino(annotation: Annotation)
+    suspend fun updateAnnotation(annotation: Annotation)
 
     @Delete
     suspend fun deleteAnnotation(annotation: Annotation)

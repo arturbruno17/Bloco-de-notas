@@ -6,6 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.posart.blocodenotas.database.dao.AnnotationDao
 import com.posart.blocodenotas.database.dao.TaskDao
+import com.posart.blocodenotas.database.entities.Annotation
 import com.posart.blocodenotas.database.entities.Task
 
 @Database(entities = [Annotation::class, Task::class], version = 1, exportSchema = false)
