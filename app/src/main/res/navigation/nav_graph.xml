@@ -11,7 +11,7 @@
         tools:layout="@layout/fragment_favorites" />
     <fragment
         android:id="@+id/annotationFragment"
-        android:name="com.posart.blocodenotas.views.AnnotationsFragment"
+        android:name="com.posart.blocodenotas.views.annotations.AnnotationsFragment"
         android:label="Anotações"
         tools:layout="@layout/fragment_annotations" >
         <action
