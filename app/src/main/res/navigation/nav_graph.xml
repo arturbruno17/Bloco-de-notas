@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_annotationFragment_to_createAnnotationFragment"
             app:destination="@id/createAnnotationFragment" />
+        <action
+            android:id="@+id/action_annotationFragment_to_updateAnnotationFragment"
+            app:destination="@id/updateAnnotationFragment" />
     </fragment>
     <fragment
         android:id="@+id/tasksFragment"
@@ -28,4 +31,12 @@
         android:name="com.posart.blocodenotas.views.CreateAnnotationFragment"
         android:label="Criar anotação"
         tools:layout="@layout/fragment_create_annotation" />
+    <fragment
+        android:id="@+id/updateAnnotationFragment"
+        android:name="com.posart.blocodenotas.views.UpdateAnnotationFragment"
+        android:label="Editar anotação" >
+        <argument
+            android:name="annotation"
+            app:argType="com.posart.blocodenotas.model.Annotation" />
+    </fragment>
 </navigation>

@@ -12,4 +12,7 @@
     <string name="save_button_text">Salvar</string>
     <string name="message_annotation_success">A anotação foi adicionada!</string>
     <string name="message_annotation_failed">Falha ao adicionar a anotação</string>
+    <string name="delete_button_text">Excluir</string>
+    <string name="message_updated_annotation_success">A anotação foi atualizada com sucesso!</string>
+    <string name="message_updated_annotation_failed">Falha ao atualizar anotação</string>
 </resources>

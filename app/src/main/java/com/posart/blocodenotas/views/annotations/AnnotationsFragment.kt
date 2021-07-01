@@ -30,11 +30,13 @@ class AnnotationsFragment : Fragment() {
 
         val gridLayoutManager = GridLayoutManager(context, 2)
         binding.recyclerView.layoutManager = gridLayoutManager
+        val adapter = AnnotationsAdapter()
+        binding.recyclerView.adapter = adapter
 
 
         viewModel.readAllData.observe(viewLifecycleOwner, {
             it?.let {
-                binding.recyclerView.adapter = AnnotationsAdapter(it)
+                adapter.submitList(it)
             }
         })
 
