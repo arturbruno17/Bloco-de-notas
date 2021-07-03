@@ -2,28 +2,25 @@ package com.posart.blocodenotas.views.annotations
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.posart.blocodenotas.database.entities.Annotation
 import com.posart.blocodenotas.databinding.AnnotationBinding
-import com.posart.blocodenotas.model.asModel
 
-class AnnotationsAdapter : ListAdapter<Annotation, AnnotationsAdapter.ViewHolder>(AnnotationItemCallBack()) {
+class AnnotationsAdapter(
+    private val onClick: (Annotation) -> Unit
+) : ListAdapter<Annotation, AnnotationsAdapter.ViewHolder>(AnnotationItemCallBack()) {
 
     class ViewHolder private constructor(
         private val binding: AnnotationBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: Annotation) {
+        fun bind(item: Annotation, onClick: (Annotation) -> Unit) {
             binding.titleCard.text = item.title
             binding.contentCard.text = item.content
             binding.card.setOnClickListener {
-                val action = AnnotationsFragmentDirections.actionAnnotationFragmentToUpdateAnnotationFragment(
-                    item.asModel()
-                )
-                it.findNavController().navigate(action)
+                onClick(item)
             }
         }
 
@@ -42,7 +39,7 @@ class AnnotationsAdapter : ListAdapter<Annotation, AnnotationsAdapter.ViewHolder
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(getItem(position))
+        holder.bind(getItem(position), onClick)
     }
 
 }

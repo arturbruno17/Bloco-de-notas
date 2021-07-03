@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.posart.blocodenotas.R
 import com.posart.blocodenotas.databinding.FragmentAnnotationsBinding
+import com.posart.blocodenotas.model.asModel
 import com.posart.blocodenotas.viewmodels.AnnotationsViewModel
 
 class AnnotationsFragment : Fragment() {
@@ -30,7 +31,11 @@ class AnnotationsFragment : Fragment() {
 
         val gridLayoutManager = GridLayoutManager(context, 2)
         binding.recyclerView.layoutManager = gridLayoutManager
-        val adapter = AnnotationsAdapter()
+        val adapter = AnnotationsAdapter {
+            val action = AnnotationsFragmentDirections
+                .actionAnnotationFragmentToUpdateAnnotationFragment(it.asModel())
+            findNavController().navigate(action)
+        }
         binding.recyclerView.adapter = adapter
 
 

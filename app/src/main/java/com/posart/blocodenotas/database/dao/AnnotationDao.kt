@@ -20,4 +20,7 @@ interface AnnotationDao {
     @Query("SELECT * FROM annotations ORDER BY id ASC")
     fun readAllAnnotations(): LiveData<List<Annotation>>
 
+    @Query("SELECT * FROM annotations WHERE favorite = 1 ORDER BY id ASC")
+    fun readAllAnnotationsMarkedAsFavorite(): LiveData<List<Annotation>>
+
 }

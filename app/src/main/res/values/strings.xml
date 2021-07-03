@@ -20,4 +20,6 @@
     <string name="name">Nome:</string>
     <string name="create_dialog_text">CRIAR</string>
     <string name="cancel_dialog_text">CANCELAR</string>
+    <string name="mark_as_favorite">Marcar como favorita</string>
+    <string name="unmark_as_favorite">Desmarcar como favorita</string>
 </resources>

@@ -45,7 +45,8 @@ class UpdateAnnotationFragment : Fragment() {
         val title = binding.editUpdateTextTitle.text.toString()
         val content = binding.editUpdateTextMessage.text.toString()
         if (inputCheck(title, content)) {
-            val annotation = Annotation(args.annotation.id, title, content)
+            val annotation =
+                Annotation(args.annotation.id, title, content, args.annotation.favorite)
             viewModel.updateAnnotation(annotation)
             Snackbar.make(
                 binding.root,
@@ -73,15 +74,40 @@ class UpdateAnnotationFragment : Fragment() {
                 findNavController().navigateUp()
             }
             R.id.delete_button -> {
-                viewModel.deleteAnnotation(Annotation(args.annotation.id, "", ""))
+                viewModel.deleteAnnotation(
+                    Annotation(
+                        args.annotation.id,
+                        "",
+                        "",
+                        args.annotation.favorite
+                    )
+                )
                 findNavController().navigateUp()
             }
+            R.id.favorite_button -> {
+                if (args.annotation.favorite) {
+                    args.annotation.favorite = false
+                    item.setTitle(R.string.mark_as_favorite)
+                    item.setIcon(R.drawable.ic_baseline_star_outline_24)
+                } else {
+                    args.annotation.favorite = true
+                    item.setTitle(R.string.unmark_as_favorite)
+                    item.setIcon(R.drawable.ic_baseline_star_24)
+                }
+            }
+
         }
         return super.onOptionsItemSelected(item)
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        val title =
+            if (args.annotation.favorite) R.string.unmark_as_favorite else R.string.mark_as_favorite
+        val icon =
+            if (args.annotation.favorite) R.drawable.ic_baseline_star_24 else R.drawable.ic_baseline_star_outline_24
         inflater.inflate(R.menu.menu_update_annotation, menu)
+        menu.findItem(R.id.favorite_button).setTitle(title)
+        menu.findItem(R.id.favorite_button).setIcon(icon)
         super.onCreateOptionsMenu(menu, inflater)
     }
 }

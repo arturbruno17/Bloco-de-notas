@@ -7,5 +7,6 @@ import androidx.room.PrimaryKey
 data class Annotation(
     @PrimaryKey(autoGenerate = true) val id: Int,
     val title: String,
-    val content: String
+    val content: String,
+    val favorite: Boolean
 )

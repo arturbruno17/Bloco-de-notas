@@ -6,7 +6,10 @@ import com.posart.blocodenotas.database.entities.Annotation
 
 class AnnotationRepository(private val annotationDao: AnnotationDao) {
 
-    val readAllData: LiveData<List<Annotation>> = annotationDao.readAllAnnotations()
+    val readAllAnnotations: LiveData<List<Annotation>> = annotationDao.readAllAnnotations()
+
+    val readAllAnnotationsMarkedAsFavorite: LiveData<List<Annotation>> =
+        annotationDao.readAllAnnotationsMarkedAsFavorite()
 
     suspend fun insertAnnotation(annotation: Annotation) {
         annotationDao.insertAnnotation(annotation)

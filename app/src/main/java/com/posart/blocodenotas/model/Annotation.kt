@@ -6,15 +6,17 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Annotation(
-    val id: Int,
-    val title: String,
-    val content: String
+    var id: Int,
+    var title: String,
+    var content: String,
+    var favorite: Boolean
 ) : Parcelable
 
 fun Annotation.asModel(): com.posart.blocodenotas.model.Annotation {
     return com.posart.blocodenotas.model.Annotation(
         id = this.id,
         title = this.title,
-        content = this.content
+        content = this.content,
+        favorite = this.favorite
     )
 }

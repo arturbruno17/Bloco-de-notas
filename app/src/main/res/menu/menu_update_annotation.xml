@@ -12,4 +12,10 @@
         app:showAsAction="always"
         android:icon="@drawable/ic_baseline_check_24"
         android:title="@string/save_button_text" />
+    <item
+        android:id="@+id/favorite_button"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_star_24"
+        android:title="@string/mark_as_favorite"
+        app:showAsAction="always" />
 </menu>

@@ -39,7 +39,7 @@ class CreateAnnotationFragment : Fragment() {
         val title = binding.editTextTitle.text.toString()
         val content = binding.editTextMessage.text.toString()
         if (inputCheck(title, content)) {
-            val annotation = Annotation(0, title, content)
+            val annotation = Annotation(0, title, content, false)
             viewModel.insertAnnotation(annotation)
             Snackbar.make(
                 binding.root,

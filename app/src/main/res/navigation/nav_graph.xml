@@ -6,9 +6,13 @@
     app:startDestination="@id/annotationFragment">
     <fragment
         android:id="@+id/favoritesFragment"
-        android:name="com.posart.blocodenotas.views.FavoritesFragment"
+        android:name="com.posart.blocodenotas.views.FavoritesAnnotationsFragment"
         android:label="Favoritos"
-        tools:layout="@layout/fragment_favorites" />
+        tools:layout="@layout/fragment_favorites_annotations" >
+        <action
+            android:id="@+id/action_favoritesFragment_to_updateAnnotationFragment"
+            app:destination="@id/updateAnnotationFragment" />
+    </fragment>
     <fragment
         android:id="@+id/annotationFragment"
         android:name="com.posart.blocodenotas.views.annotations.AnnotationsFragment"
