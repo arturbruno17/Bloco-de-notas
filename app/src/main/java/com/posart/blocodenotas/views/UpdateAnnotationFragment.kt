@@ -70,6 +70,7 @@ class UpdateAnnotationFragment : Fragment() {
         when (item.itemId) {
             R.id.save_button -> {
                 updateDataToDatabase()
+                findNavController().navigateUp()
             }
             R.id.delete_button -> {
                 viewModel.deleteAnnotation(Annotation(args.annotation.id, "", ""))
