@@ -23,7 +23,7 @@
     </fragment>
     <fragment
         android:id="@+id/tasksFragment"
-        android:name="com.posart.blocodenotas.views.TasksFragment"
+        android:name="com.posart.blocodenotas.views.tasks.TasksFragment"
         android:label="Tarefas"
         tools:layout="@layout/fragment_tasks" />
     <fragment

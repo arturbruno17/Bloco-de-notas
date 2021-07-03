@@ -15,4 +15,9 @@
     <string name="delete_button_text">Excluir</string>
     <string name="message_updated_annotation_success">A anotação foi atualizada com sucesso!</string>
     <string name="message_updated_annotation_failed">Falha ao atualizar anotação</string>
+    <string name="delete_task">Excluir tarefa</string>
+    <string name="create_task">Criar tarefa</string>
+    <string name="name">Nome:</string>
+    <string name="create_dialog_text">CRIAR</string>
+    <string name="cancel_dialog_text">CANCELAR</string>
 </resources>
